@@ -51,7 +51,7 @@ function NextTrip({ posts }) {
             <SwiperSlide key={post.id}>
               <div className="flex flex-col space-y-4">
                 {/* image */}
-                <div className=" group relative w-full h-[290px] md:h-[320px] overflow-hidden rounded-lg  shadow-lg shadow-[#5c2d9040] ">
+                <div className=" group relative w-full h-[290px] md:h-[320px] overflow-hidden rounded-lg  shadow-lg shadow-[#445cdc40] ">
                   <Image
                     loader={() => {
                       return `${post.image}`;

@@ -81,7 +81,7 @@ export default function TableBooking({ dataTable }) {
             <TableHead>
               <TableRow>
                 <TableCell
-                  sx={{ color: "#5C2D90", fontWeight: "700", fontSize: "16px" }}
+                  sx={{ color: "#445cdc", fontWeight: "700", fontSize: "16px" }}
                   align="center"
                   colSpan={2}
                 >
@@ -101,7 +101,7 @@ export default function TableBooking({ dataTable }) {
                       top: 57,
                       minWidth: column.minWidth,
                       fontSize: "16px",
-                      color: "#5C2D90 ",
+                      color: "#445cdc ",
                     }}
                   >
                     {column.label}

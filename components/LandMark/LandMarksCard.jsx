@@ -9,7 +9,7 @@ function LandMarksCard({ image, title, destination, slug }) {
   return (
     <div className="flex flex-col space-y-4 ">
       {/* image */}
-      <div className=" group relative w-full h-[220px] md:h-[280px] overflow-hidden rounded-lg  shadow-lg shadow-[#5c2d9040] ">
+      <div className=" group relative w-full h-[220px] md:h-[280px] overflow-hidden rounded-lg  shadow-lg shadow-[#445cdc40] ">
         <ImageLandMarkSlider arrayOfImages={image} />
       </div>
       <div className="flex flex-col space-y-1">

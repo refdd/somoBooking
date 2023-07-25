@@ -117,7 +117,7 @@ function CardTour({
       {/*duration */}
       {!blog && (
         <div className="absolute top-40 right-5 rounded bg-MainYeloow py-1 px-3 z-10  ">
-          <p className="text-mainColor font-sans capitalize">{duration}</p>
+          <p className="text-white font-sans capitalize">{duration}</p>
         </div>
       )}
       {/* title */}
@@ -143,7 +143,7 @@ function CardTour({
       </p>
       {/* rating*/}
       <div className=" flex items-center gap-2">
-        <span className="h-[30px] w-[30px] bg-MainYeloow font-semibold  text-mainColor rounded flex justify-center items-center">
+        <span className="h-[30px] w-[30px] bg-MainYeloow font-semibold  text-white rounded flex justify-center items-center">
           {ratingNumber}
         </span>
         <span className="text-[#051036] font-medium font-sans text-sm ">

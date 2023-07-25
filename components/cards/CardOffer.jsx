@@ -82,7 +82,7 @@ function CardOffer({
           {/* <p className="text-white font-sans capitalize py-1 px-3 rounded   bg-[#051036]">
             Breakfast included
           </p> */}
-          <p className="text-mainColor font-sans capitalize bg-MainYeloow py-1 px-3 rounded  font-semibold ">
+          <p className="text-white font-sans capitalize bg-MainYeloow py-1 px-3 rounded  font-semibold ">
             {discount}% off
           </p>
         </div>
@@ -134,7 +134,7 @@ function CardOffer({
       </p>
       {/* rating*/}
       <div className=" flex items-center gap-2">
-        <span className="h-[30px] w-[30px] bg-MainYeloow font-semibold  text-mainColor rounded flex justify-center items-center">
+        <span className="h-[30px] w-[30px] bg-MainYeloow font-semibold  text-white rounded flex justify-center items-center">
           {ratingNumber}
         </span>
         <span className="text-mainColor font-medium font-sans text-sm ">

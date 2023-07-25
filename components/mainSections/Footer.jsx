@@ -77,7 +77,7 @@ function Footer() {
             <div className=" flex flex-col space-y-7">
               {/* logo footer */}
               <div className="relative  w-[256px] h-[53px] md:w-[373px]  md:h-[90px]   bg-white p-73 rounded ">
-                <Image
+                {/* <Image
                   src={footerLoge}
                   fill
                   loading="lazy"
@@ -86,7 +86,7 @@ function Footer() {
                   sizes="(max-width: 768px) 100vw,
                 (max-width: 1200px) 50vw,
                 33vw"
-                />
+                /> */}
               </div>
               <div className=" flex flex-col space-y-3 md:space-y-0 md:flex-row md:gap-10">
                 {/* coll and support */}
@@ -151,37 +151,37 @@ function Footer() {
                 Tourzable
               </p>
               <ul className="flex flex-col space-y-7 pt-2 text-white text-[16px] font-sans capitalize">
-                <li className=" hover:text-[#3554d1] transition-all">
+                <li className=" hover:text-gray-800 transition-all">
                   <Link href={"/AboutUs"}>
                     <span>About Us</span>
                   </Link>
                 </li>
-                <li className=" hover:text-[#3554d1] transition-all">
+                <li className=" hover:text-gray-800 transition-all">
                   <Link href={"/visa"}>
                     <span>E-Visa</span>
                   </Link>
                 </li>
-                <li className=" hover:text-[#3554d1] transition-all">
+                <li className=" hover:text-gray-800 transition-all">
                   <Link href={"/Privacy"}>
                     <span>Privacy</span>
                   </Link>
                 </li>
-                <li className=" hover:text-[#3554d1] transition-all">
+                <li className=" hover:text-gray-800 transition-all">
                   <Link href={"/Terms-conditions"}>
                     <span>Terms & Conditions</span>
                   </Link>
                 </li>
-                <li className=" hover:text-[#3554d1] transition-all">
+                <li className=" hover:text-gray-800 transition-all">
                   <Link href={"/cancellation-policy"}>
                     <span>Cancellation Policy</span>
                   </Link>
                 </li>
-                <li className=" hover:text-[#3554d1] transition-all">
+                <li className=" hover:text-gray-800 transition-all">
                   <Link href={"/contact-us"}>
                     <span>Contact Us</span>
                   </Link>
                 </li>
-                <li className=" hover:text-[#3554d1] transition-all">
+                <li className=" hover:text-gray-800 transition-all">
                   <Link href={"/FAQ"}>
                     <span>FAQ</span>
                   </Link>
@@ -194,23 +194,23 @@ function Footer() {
                 Dashboard
               </p>
               <ul className="flex flex-col space-y-7 pt-2 text-white text-[16px] font-sans capitalize">
-                <li className=" hover:text-[#3554d1] transition-all">
+                <li className=" hover:text-gray-800 transition-all">
                   <Link href={"/tour_guides_register"}>
                     <span>Tour Guide Registration</span>
                   </Link>
                 </li>
-                <li className=" hover:text-[#3554d1] transition-all">
+                <li className=" hover:text-gray-800 transition-all">
                   <span>Agency</span>
                 </li>
-                <li className=" hover:text-[#3554d1] transition-all">
+                <li className=" hover:text-gray-800 transition-all">
                   <span>DMC</span>
                 </li>
-                <li className=" hover:text-[#3554d1] transition-all ">
+                <li className=" hover:text-gray-800 transition-all ">
                   <p className="text-[16px] text-white font-medium capitalize font-sans">
                     Ways You Can Pay
                   </p>
                 </li>
-                <li className=" hover:text-[#3554d1] transition-all ">
+                <li className=" hover:text-gray-800 transition-all ">
                   <div className="flex flex-row gap-3 ">
                     <Image
                       src={mada}
@@ -244,23 +244,23 @@ function Footer() {
               </p>
               <ul className="flex flex-col space-y-7 pt-2 text-white text-[16px] font-sans capitalize">
                 <Link href="tel:0564445507">
-                  <li className=" hover:text-[#3554d1] transition-all flex items-center gap-3">
+                  <li className=" hover:text-gray-800 transition-all flex items-center gap-3">
                     <AiFillPhone className="text-lg text-white" />
                     <span>0564445507</span>
                   </li>
                 </Link>
 
-                <li className=" hover:text-[#3554d1] transition-all flex items-center gap-3">
+                <li className=" hover:text-gray-800 transition-all flex items-center gap-3">
                   <MdLocationPin className="text-lg text-white" />
                   <span>Eastern Province</span>
                 </li>
                 <Link href="mailto:Sales@Tourzable.Com">
-                  <li className=" hover:text-[#3554d1] transition-all flex items-center gap-3">
+                  <li className=" hover:text-gray-800 transition-all flex items-center gap-3">
                     <BsFillEnvelopeFill className="text-lg text-textPurple" />
                     <span> Sales@Tourzable.Com</span>
                   </li>
                 </Link>
-                <li className=" hover:text-[#3554d1] transition-all flex items-center gap-3">
+                <li className=" hover:text-gray-800 transition-all flex items-center gap-3">
                   <div className="flex flex-col ">
                     <Link href={"https://maroof.sa/businesses/details/126288"}>
                       <Image

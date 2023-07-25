@@ -140,7 +140,7 @@ function CardListTour({
             : "hidden  "
         }
       >
-        <p className="text-mainColor font-sans capitalize">{duration}</p>
+        <p className="text-white font-sans capitalize">{duration}</p>
       </div>
       {/* crnter */}
       <div
@@ -173,7 +173,7 @@ function CardListTour({
               ViewTours ? "hidden   " : " rounded bg-MainYeloow py-1 px-5 z-10 "
             }
           >
-            <p className="text-mainColor font-sans capitalize"> {duration}</p>
+            <p className="text-white font-sans capitalize"> {duration}</p>
           </div>
         </div>
         <div className="text-gray-500 text-lg font-sans capitalize font-normal md:text-[16px]">

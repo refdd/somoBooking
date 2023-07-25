@@ -22,14 +22,14 @@ function SingleFandQ({ questions }) {
              ${
                activeIndex === index
                  ? "bg-[#051036] text-white "
-                 : "bg-MainYeloow text-mainColor"
+                 : "bg-MainYeloow text-white"
              }
           `}
               >
                 <BiPlus className={activeIndex === index ? "rotate-45 " : ""} />
               </div>
             </div>
-            <h2 className=" text-mainColor text-[15px] md:text-lg font-medium font-sans capitalize">
+            <h2 className=" text-textColor text-[15px] md:text-lg font-medium font-sans capitalize">
               {q.question}
             </h2>
           </button>

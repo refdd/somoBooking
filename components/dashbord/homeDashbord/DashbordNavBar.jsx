@@ -91,14 +91,14 @@ function DashbordNavBar() {
               <li className=" text-sm text-[#fff]  font-semibold font-sans py-4  hover:text-[#3554d1] hover:bg-[#3554d10d] px-2">
                 <Link href={"Saudi-travel-blog"}>Saudi Travel Blog</Link>
               </li>
-              <li className=" text-sm text-[#fff]  font-semibold font-sans py-4  hover:text-[#3554d1] hover:bg-[#3554d10d] px-2">
+              {/* <li className=" text-sm text-[#fff]  font-semibold font-sans py-4  hover:text-[#3554d1] hover:bg-[#3554d10d] px-2">
                 <Link href={"/visa"}>
                   <span>E-Visa</span>
                 </Link>
-              </li>
+              </li> */}
               <li className=" text-sm text-[#051036]  font-semibold font-sans hover:text-[#3554d1] hover:bg-[#3554d10d] px-2 cursor-pointer">
                 <Link href={"/customize-your-trip"}>
-                  <span className="py-1 px-1 rounded-lg flex items-center justify-center bg-MainYeloow">
+                  <span className="py-1 px-1 rounded-lg flex items-center justify-center bg-white">
                     {t("common:home.Customize_trip")}
                   </span>
                 </Link>
@@ -171,14 +171,14 @@ function DashbordNavBar() {
           <li className=" text-sm text-[#051036]  font-semibold font-sans py-4  hover:text-[#3554d1] hover:bg-[#3554d10d] px-2">
             <Link href={"Saudi-travel-blog"}>Saudi Travel Blog</Link>
           </li>
-          <li className=" text-sm text-[#051036]  font-semibold font-sans py-4  hover:text-[#3554d1] hover:bg-[#3554d10d] px-2">
+          {/* <li className=" text-sm text-[#051036]  font-semibold font-sans py-4  hover:text-[#3554d1] hover:bg-[#3554d10d] px-2">
             <Link href={"/visa"}>
               <span>E-Visa</span>
             </Link>
-          </li>
+          </li> */}
           <li className=" text-sm text-[#051036]  font-semibold font-sans py-4  hover:text-[#3554d1] hover:bg-[#3554d10d] px-2 cursor-pointer">
             <Link href={"/customize-your-trip"}>
-              <span className="py-1 px-1 rounded-lg flex items-center justify-center bg-MainYeloow">
+              <span className="py-1 px-1 rounded-lg flex items-center justify-center bg-white">
                 {t("common:home.Customize_trip")}
               </span>
             </Link>

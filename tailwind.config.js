@@ -11,11 +11,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        mainColor: "#5C2D90",
-        secondColor: "#9753A0",
+        mainColor: "#445cdc",
+        secondColor: "#2e86b8",
         mainLightColor: "#9E6EAE",
         textPurple: "#704f88",
-        MainYeloow: "#FFD440",
+        MainYeloow: "#2e86b8",
         textColor: "#3A2D4C",
         secandTextColor: "#462472",
         shadowColorMain: "#9e6eae5e",

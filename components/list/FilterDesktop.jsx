@@ -203,7 +203,7 @@ function FilterDesktop({ regions }) {
                 max={840}
                 sx={{
                   "& .MuiSlider-thumb": {
-                    color: "#5C2D90",
+                    color: "#445cdc",
                   },
                   "& .MuiSlider-track": {
                     color: "#FFD440",

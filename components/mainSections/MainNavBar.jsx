@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import NavLogo from "../../public/assets/images/The-Logo.png";
-import DarkLogo from "../../public/assets/images/logo-dark.svg";
+import NavLogo from "../../public/assets/images/newlogo.png";
 import { BiUserCircle } from "react-icons/bi";
 import { CgMenuLeftAlt } from "react-icons/cg";
 import Link from "next/link";
@@ -47,67 +46,40 @@ function MainNavBar() {
     });
   }, []);
 
-  // const MyComponent = () => {
-  //   const { t, i18n } = useTranslation();
-  //   const changeLanguage = (language) => {
-  //     i18n.changeLanguage(language);
-  //   };
-  //   useSSR(); // Ensure translations are preloaded during server-side rendering
-
-  //   useEffect(() => {
-  //     document.body.dir = i18n.dir();
-  //     setDirection(document.body.dir);
-  //   });
-  //   return (
-  //     <div>
-  //       <h1>{t("home:home.hello")}</h1>
-  //       <p>{t("home:home.welcome")}</p>
-
-  //       <button onClick={() => changeLanguage("en")}>English</button>
-  //       <button onClick={() => changeLanguage("ar")}>Arabic</button>
-  //       <button onClick={() => changeLanguage("zh")}>chanibbe</button>
-  //     </div>
-  //   );
-  // };
-
   return (
     <div className="fixed top-0 left-0  w-full z-[10000]">
       <div className="flex flex-col">
         <div
-          className={`flex items-center justify-between transition-all px-3 py-4 md:py-2  ${
+          className={`grid grid-cols-2 md:grid-cols-7 items-center justify-between transition-all px-3 py-4 md:py-2  ${
             menuBar ? "bg-white" : ""
           } ${!isTop ? "bg-[#FFF]" : undefined} `}
         >
-          <div className=" flex items-center gap-5">
+          <div className=" flex items-center gap-5 md:col-span-6">
             {/* logo */}
-            <Link href={"/"}>
-              <div className=" relative w-[134px] h-[34px] md:h-[50px] md:w-[224px] flex items-center ">
-                {menuBar ? (
-                  <Image
-                    src={NavLogo}
-                    loading={"lazy"}
-                    alt="logo"
-                    fill
-                    sizes="(max-width: 768px) 100vw,
+            <div className="">
+              <Link href={"/"}>
+                <div className=" relative  sm:h-[50px] w-[224px] md:w-[150px] md:h-[80px] flex items-center ">
+                  {menuBar ? (
+                    ""
+                  ) : (
+                    <Image
+                      src={NavLogo}
+                      width={100}
+                      height={34}
+                      loading={"lazy"}
+                      alt="logo"
+                      sizes="(max-width: 768px) 100vw,
                 (max-width: 1200px) 50vw,
                 33vw"
-                  />
-                ) : (
-                  <Image
-                    src={NavLogo}
-                    fill
-                    loading={"lazy"}
-                    alt="logo"
-                    sizes="(max-width: 768px) 100vw,
-                (max-width: 1200px) 50vw,
-                33vw"
-                  />
-                )}
-              </div>
-            </Link>
+                      className="object-contain"
+                    />
+                  )}
+                </div>
+              </Link>
+            </div>
             {/* <MyComponent /> */}
             {/* links desktop */}
-            <ul className={` hidden  md:flex items-center  `}>
+            <ul className={` hidden  lg:flex items-center  `}>
               <li
                 className={` text-sm   font-semibold font-sans py-4  hover:bg-[#3554d10d] px-2  ${
                   !isTop ? "text-[#051036]" : "text-[#fff]"
@@ -131,13 +103,13 @@ function MainNavBar() {
               >
                 <Link href={"/activities"}> {t("common:home.actives")}</Link>
               </li>
-              <li
+              {/* <li
                 className={` text-sm   font-semibold font-sans py-4  hover:bg-[#3554d10d] px-2  ${
                   !isTop ? "text-[#051036]" : "text-[#fff]"
                 } `}
               >
                 <Link href={"/umrah"}>{t("common:home.umrah")}</Link>
-              </li>
+              </li> */}
               <li
                 className={` text-sm   font-semibold font-sans py-4  hover:bg-[#3554d10d] px-2  ${
                   !isTop ? "text-[#051036]" : "text-[#fff]"
@@ -182,7 +154,7 @@ function MainNavBar() {
               </li> */}
               <li className=" text-sm   font-semibold font-sans   hover:bg-[#3554d10d] px-2">
                 <Link href={"/customize-your-trip"}>
-                  <span className="py-1 px-1 rounded-lg flex items-center justify-center bg-MainYeloow">
+                  <span className="py-1 px-1 rounded-lg flex items-center justify-center bg-white">
                     {t("common:home.Customize_trip")}{" "}
                   </span>
                 </Link>
@@ -196,7 +168,7 @@ function MainNavBar() {
             </ul>
           </div>
           {/* button distop */}
-          <div className=" hidden md:flex items-center gap-3">
+          <div className=" hidden lg:flex items-center gap-3 md:col-span-1">
             {session ? (
               <UserNav />
             ) : (
@@ -222,7 +194,7 @@ function MainNavBar() {
             )}
           </div>
           {/* user and menu bar */}
-          <div className="flex md:hidden items-center gap-2">
+          <div className="flex lg:hidden items-center gap-2 justify-end">
             {/* icon user */}
             {session ? (
               <UserNav />
@@ -249,7 +221,7 @@ function MainNavBar() {
         <ul
           className={` ${
             menuBar ? "flex" : "hidden"
-          }  md:hidden flex-col p-6 bg-white border-y overflow-y-auto h-screen pb-40 `}
+          }  lg:hidden flex-col p-6 bg-white border-y overflow-y-auto h-screen pb-40 `}
         >
           <li className=" text-lg text-[#051036]  font-semibold font-sans py-4  hover:text-[#3554d1] hover:bg-[#3554d10d] px-2 cursor-pointer">
             <Link legacyBehavior href={"/"}>
@@ -276,15 +248,15 @@ function MainNavBar() {
           <li className=" text-lg text-[#051036]  font-semibold font-sans py-4  hover:text-[#3554d1] hover:bg-[#3554d10d] px-2 cursor-pointer">
             <Link href={"/Saudi-travel-blog"}>Saudi Travel Blog</Link>
           </li>
-          <li className=" text-lg text-[#051036]  font-semibold font-sans py-4  hover:text-[#3554d1] hover:bg-[#3554d10d] px-2 cursor-pointer">
+          {/* <li className=" text-lg text-[#051036]  font-semibold font-sans py-4  hover:text-[#3554d1] hover:bg-[#3554d10d] px-2 cursor-pointer">
             <Link href={"/visa"}>
               <span>E-Visa</span>
             </Link>
-          </li>
+          </li> */}
 
           <li className=" text-lg text-[#051036]  font-semibold font-sans py-4  hover:text-[#3554d1] hover:bg-[#3554d10d] px-2 cursor-pointer">
             <Link href={"/customize-your-trip"}>
-              <span className="py-1 px-1 rounded-lg flex items-center justify-center bg-MainYeloow">
+              <span className="py-1 px-1 rounded-lg flex items-center justify-center bg-white">
                 {t("common:home.Customize_trip")}
               </span>
             </Link>

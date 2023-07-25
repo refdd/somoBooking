@@ -6,7 +6,7 @@
   display: none;
 }
 .bar {
-  background: #5c2d90 !important;
+  background: #445cdc !important;
   height: 5px !important;
 }
 .css-1hj5xsr-MuiInputBase-root-MuiInput-root-MuiSelect-root:after {
@@ -18,7 +18,7 @@
   cursor: pointer;
 }
 .swiper-pagination-bullet-active {
-  background-color: #5c2d90 !important;
+  background-color: #445cdc !important;
 }
 .hover-underline-animation::after {
   content: "";
@@ -83,7 +83,7 @@ html {
   scroll-behavior: smooth;
 }
 .css-1eqj694-MuiTabs-root .MuiTabs-scrollButtons {
-  color: #5c2d90;
+  color: #445cdc;
 }
 .css-1o9g21p {
   border-radius: 10px;

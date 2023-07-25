@@ -26,7 +26,7 @@ function HeaderSingle({ title, location, price, starNumber, reviews_count }) {
         <div className="flex  gap-2 text-MainYeloow text-sm">{stars}</div>
         {/* rating*/}
         <div className=" flex items-center gap-2">
-          <span className="h-[30px] w-[30px] bg-MainYeloow font-semibold  text-mainColor rounded flex justify-center items-center">
+          <span className="h-[30px] w-[30px] bg-MainYeloow font-semibold  text-white rounded flex justify-center items-center">
             {starNumber}
           </span>
           <span className="text-[#051036] font-medium font-sans text-sm ">

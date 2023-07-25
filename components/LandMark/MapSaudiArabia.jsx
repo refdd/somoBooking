@@ -19,11 +19,11 @@ function MapSaudiArabia() {
               style={{
                 fontSize: "13px",
                 textTransform: "capitalize ",
-                color: "#5C2D90",
+                color: "#445cdc",
                 fontWeight: "bold",
               }}
-              onClick={()=>{
-                setDestination(4)
+              onClick={() => {
+                setDestination(4);
               }}
             >
               Eastern Province
@@ -37,11 +37,11 @@ function MapSaudiArabia() {
               style={{
                 fontSize: "13px",
                 textTransform: "capitalize ",
-                color: "#5C2D90",
+                color: "#445cdc",
                 fontWeight: "bold",
               }}
-              onClick={()=>{
-                setDestination(1)
+              onClick={() => {
+                setDestination(1);
               }}
             >
               Riyadh
@@ -55,11 +55,11 @@ function MapSaudiArabia() {
               style={{
                 fontSize: "8px",
                 textTransform: "capitalize ",
-                color: "#5C2D90",
+                color: "#445cdc",
                 fontWeight: "bold",
               }}
-              onClick={()=>{
-                setDestination(7)
+              onClick={() => {
+                setDestination(7);
               }}
             >
               Al-Qassim
@@ -73,11 +73,11 @@ function MapSaudiArabia() {
               style={{
                 fontSize: "8px",
                 textTransform: "capitalize ",
-                color: "#5C2D90",
+                color: "#445cdc",
                 fontWeight: "bold",
               }}
-              onClick={()=>{
-                setDestination(13)
+              onClick={() => {
+                setDestination(13);
               }}
             >
               northern borders
@@ -91,11 +91,11 @@ function MapSaudiArabia() {
               style={{
                 fontSize: "11px",
                 textTransform: "capitalize ",
-                color: "#5C2D90",
+                color: "#445cdc",
                 fontWeight: "bold",
               }}
-              onClick={()=>{
-                setDestination(11)
+              onClick={() => {
+                setDestination(11);
               }}
             >
               Al-jawf
@@ -109,11 +109,11 @@ function MapSaudiArabia() {
               style={{
                 fontSize: "14px",
                 textTransform: "capitalize ",
-                color: "#5C2D90",
+                color: "#445cdc",
                 fontWeight: "bold",
               }}
-              onClick={()=>{
-                setDestination(9)
+              onClick={() => {
+                setDestination(9);
               }}
             >
               Ha'll
@@ -127,11 +127,11 @@ function MapSaudiArabia() {
               style={{
                 fontSize: "14px",
                 textTransform: "capitalize ",
-                color: "#5C2D90",
+                color: "#445cdc",
                 fontWeight: "bold",
               }}
-              onClick={()=>{
-                setDestination(8)
+              onClick={() => {
+                setDestination(8);
               }}
             >
               Tabuk
@@ -145,11 +145,11 @@ function MapSaudiArabia() {
               style={{
                 fontSize: "14px",
                 textTransform: "capitalize ",
-                color: "#5C2D90",
+                color: "#445cdc",
                 fontWeight: "bold",
               }}
-              onClick={()=>{
-                setDestination(3)
+              onClick={() => {
+                setDestination(3);
               }}
             >
               Medina
@@ -163,11 +163,11 @@ function MapSaudiArabia() {
               style={{
                 fontSize: "14px",
                 textTransform: "capitalize ",
-                color: "#5C2D90",
+                color: "#445cdc",
                 fontWeight: "bold",
               }}
-              onClick={()=>{
-                setDestination(2)
+              onClick={() => {
+                setDestination(2);
               }}
             >
               Mecca
@@ -181,11 +181,11 @@ function MapSaudiArabia() {
               style={{
                 fontSize: "6px",
                 textTransform: "capitalize ",
-                color: "#5C2D90",
+                color: "#445cdc",
                 fontWeight: "bold",
               }}
-              onClick={()=>{
-                setDestination(12)
+              onClick={() => {
+                setDestination(12);
               }}
             >
               Al bahah
@@ -199,11 +199,11 @@ function MapSaudiArabia() {
               style={{
                 fontSize: "14px",
                 textTransform: "capitalize ",
-                color: "#5C2D90",
+                color: "#445cdc",
                 fontWeight: "bold",
               }}
-              onClick={()=>{
-                setDestination(5)
+              onClick={() => {
+                setDestination(5);
               }}
             >
               Asir
@@ -217,11 +217,11 @@ function MapSaudiArabia() {
               style={{
                 fontSize: "14px",
                 textTransform: "capitalize ",
-                color: "#5C2D90",
+                color: "#445cdc",
                 fontWeight: "bold",
               }}
-              onClick={()=>{
-                setDestination(10)
+              onClick={() => {
+                setDestination(10);
               }}
             >
               Nayjran
