@@ -61,10 +61,10 @@ export default function App({ Component, pageProps, session }) {
       case "zh":
         changeLanguage("zh");
       default:
-        changeLanguage("en");
+        changeLanguage("ar");
     }
   }, []);
-  console.log(rtlTheme);
+  console.log(locale);
   return (
     <SessionProvider session={session}>
       <ContextProvider>

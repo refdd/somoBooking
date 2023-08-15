@@ -57,7 +57,7 @@ function SingleTour({ singletour }) {
     reviews_count,
     eligibles,
   } = singletour;
-  console.log(singletour);
+  // console.log(singletour);
   return (
     <>
       <Head>

@@ -11,6 +11,8 @@ import { useRouter } from "next/router";
 import axios from "axios";
 import { useStateContext } from "@/contexts/ContextProvider";
 import { useSession } from "next-auth/react";
+import { HotelOutlined, RoomOutlined, RoomService } from "@mui/icons-material";
+import { root } from "postcss";
 
 function OrderForm({
   aduits,
@@ -23,6 +25,7 @@ function OrderForm({
   prices,
   discountId,
   discount,
+  room,
 }) {
   const [number, setnumber] = useState("+1");
   const [fristName, setFristName] = useState("");
@@ -104,6 +107,17 @@ function OrderForm({
       });
     // console.log({ ...data, number, aduits, childs });
   };
+  const childsInput = Array.from({ length: childs }, (_, i) => (
+    <TextField
+      placeholder="Mohamed "
+      required
+      fullWidth
+      variant="standard"
+      name="firstName "
+      label={`child number ${i}`}
+      type="number"
+    />
+  ));
   return (
     <div className="container mx-auto px-4 py-3">
       <div className="border p-3 rounded shadow-lg shadow-shadowColorMain">
@@ -183,18 +197,18 @@ function OrderForm({
               />
             </div>
             {/* last name */}
-            <div className="">
+            <div className="md:col-span-2">
               <CustomTextField name="address" label="address" type={"text"} />
             </div>
             {/* last name */}
-            <div className="">
+            {/* <div className="">
               <CustomTextField
                 required
                 name="postal code"
                 label="Postal Code"
                 type={"number"}
               />
-            </div>
+            </div> */}
             {/* counter */}
             <div className=" md:col-span-2 ">
               <div className=" grid grid-cols-2 gap-3 mt-5">
@@ -268,8 +282,10 @@ function OrderForm({
                     </div>
                   </div>
                 </div>
+                <div className=" md:col-span-2">{childsInput}</div>
+
                 {/*  */}
-                <div className=" col-span-2">
+                <div className=" ">
                   <div className="flex flex-col space-y-2  ">
                     <div className="flex items-center">
                       <MdChildFriendly className="text-2xl text-MainYeloow" />
@@ -297,6 +313,43 @@ function OrderForm({
                       <div
                         onClick={() => {
                           handleremoveCounter("infant");
+                        }}
+                        className="text-mainColor text-xl cursor-pointer"
+                      >
+                        <MdOutlinePersonRemoveAlt1 />{" "}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/*  */}
+                <div className=" ">
+                  <div className="flex flex-col space-y-2  ">
+                    <div className="flex items-center gap-1">
+                      <HotelOutlined className="text-2xl text-MainYeloow" />
+                      <span className="text-sm text-[#555] font-sans capitalize font-medium">
+                        {" "}
+                        room
+                      </span>
+                    </div>
+                    <div className="flex items-center px-5">
+                      <div
+                        onClick={() => {
+                          handleAddCounter("room");
+                        }}
+                        className="text-mainColor text-xl cursor-pointer"
+                      >
+                        <BsPersonAdd />{" "}
+                      </div>
+                      <TextField
+                        fullWidth
+                        type="tel"
+                        variant="standard"
+                        value={room}
+                        inputProps={{ style: { textAlign: "center" } }}
+                      />
+                      <div
+                        onClick={() => {
+                          handleremoveCounter("room");
                         }}
                         className="text-mainColor text-xl cursor-pointer"
                       >

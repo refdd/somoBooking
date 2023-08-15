@@ -80,7 +80,7 @@ function GuideOrders({ profileData }) {
 export default GuideOrders;
 export async function getServerSideProps(context) {
   const session = await getSession(context);
-  const locale = context.locale || "en";
+  const locale = context.locale || "ar";
 
   let token = "";
   if (session) {

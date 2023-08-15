@@ -1,4 +1,4 @@
-import { Modal } from "@mui/material";
+import { Button, Modal } from "@mui/material";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
@@ -93,8 +93,8 @@ function BookingContainer({ dataBooking }) {
                 </div>
                 {/* buttons */}
                 <div className=" flex flex-wrap items-center gap-2">
-                  {item?.pay_now && (
-                    <div
+                  <div className="py-2  cursor-pointer rounded-lg">
+                    <Button
                       onClick={() => {
                         handlePayment({
                           start_date: item.start_date,
@@ -110,13 +110,14 @@ function BookingContainer({ dataBooking }) {
                           childs: item?.kid,
                         });
                       }}
-                      className="py-2 px-6 cursor-pointer bg-mainColor rounded-lg"
+                      variant="contained"
+                      fullWidth
+                      className="px-6"
+                      disabled={!item?.pay_now}
                     >
-                      <button className="text-white text-sm font-semibold capitalize font-sans">
-                        pay
-                      </button>
-                    </div>
-                  )}
+                      pay
+                    </Button>
+                  </div>
 
                   <div className="py-2 px-6 cursor-pointer bg-MainYeloow rounded-lg">
                     <Link

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import CheckAvailability from "./CheckAvailability";
 import Inquery from "./Inquery";
 import { useTranslation } from "react-i18next";
+import CallBack from "./CallBack";
 
 function From({
   idPackage,
@@ -13,7 +14,7 @@ function From({
   max,
   payMode,
 }) {
-  const [openFrom, setOpenFrom] = useState(false);
+  const [openFrom, setOpenFrom] = useState(true);
   const { t, i18n } = useTranslation();
   return (
     <div className="container mx-auto px-4 pb-8 h-full " id="InquireFrom">
@@ -27,11 +28,12 @@ function From({
              ${
                openFrom
                  ? " bg-white  text-textPurple"
-                 : "text-white bg-[#ffc107] "
+                 : "text-white bg-mainColor "
              }`}
           >
             <button className="text-[16px]  font-sans font-medium capitalize">
-              {t("common:single.Inquiry")}
+              {/* {t("common:single.Inquiry")} */}
+              contact wiht us
             </button>
           </div>
           <div
@@ -61,7 +63,8 @@ function From({
             payMode={payMode}
           />
         ) : (
-          <Inquery idPackage={idPackage} min={min} />
+          // <Inquery idPackage={idPackage} min={min} />
+          <CallBack />
         )}
       </div>
     </div>

@@ -123,7 +123,7 @@ function FormEditePearsonInfo({
               }}
             />
           </div>
-          <div className="">
+          {/* <div className="">
             <TextField
               value={idNumberPerson}
               required
@@ -136,7 +136,7 @@ function FormEditePearsonInfo({
                 setIdNumberPerson(e.target.value);
               }}
             />
-          </div>
+          </div> */}
           <div className="">
             <TextField
               value={passportPerson}

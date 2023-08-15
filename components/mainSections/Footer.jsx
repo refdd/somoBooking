@@ -200,6 +200,11 @@ function Footer() {
                   </Link>
                 </li>
                 <li className=" hover:text-gray-800 transition-all">
+                  <Link href={"/Passport_application"}>
+                    <span>Passport application</span>
+                  </Link>
+                </li>
+                <li className=" hover:text-gray-800 transition-all">
                   <span>Agency</span>
                 </li>
                 <li className=" hover:text-gray-800 transition-all">

@@ -16,6 +16,7 @@ function Checkout() {
   const [payMode, setPayMode] = useState();
   const [childs, setChilds] = useState();
   const [infant, setinfant] = useState(0);
+  const [room, setRoom] = useState(0);
   const [prices, setPrices] = useState();
   const [cobone, setCodone] = useState();
   const [discount, setDiscount] = useState(0);
@@ -42,6 +43,9 @@ function Checkout() {
     if (type == "infant") {
       setinfant(infant + 1);
     }
+    if (type == "room") {
+      setRoom(room + 1);
+    }
   };
   const handleremoveCounter = (type) => {
     if (type == "adults" && aduits > 0) {
@@ -52,6 +56,9 @@ function Checkout() {
     }
     if (type == "infant" && infant > 0) {
       setinfant(infant - 1);
+    }
+    if (type == "room" && room > 0) {
+      setRoom(room - 1);
     }
   };
 
@@ -118,6 +125,7 @@ function Checkout() {
           payMode={payMode}
           discountId={discountId}
           discount={discount}
+          room={room}
         />
       </div>
       <Footer />

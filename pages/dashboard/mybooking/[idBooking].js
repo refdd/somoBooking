@@ -32,7 +32,7 @@ function SingelBooking() {
         `https://new.tourzable.com/api/people?booking_id=${idBooking}`
       );
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
       setBookingpeople(data?.data);
     } catch (error) {
       console.error("An error occurred:", error);
@@ -43,7 +43,7 @@ function SingelBooking() {
 
     allBookingPersons();
   }, [idBooking]);
-  console.log(dataEditePerson);
+  // console.log(dataEditePerson);
   return (
     <div className="bg-[#f5f5f5]">
       <DashbordNavBar />

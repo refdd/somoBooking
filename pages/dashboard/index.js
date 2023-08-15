@@ -75,7 +75,7 @@ function Dashboard({ tours, activitys, umrah, landmarks, profileData }) {
 export default Dashboard;
 export async function getServerSideProps(context) {
   const session = await getSession(context);
-  const locale = context.locale || "en";
+  const locale = context.locale || "ar";
 
   let token = "";
   if (session) {
