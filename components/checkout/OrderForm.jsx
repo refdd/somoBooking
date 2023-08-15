@@ -109,6 +109,7 @@ function OrderForm({
   };
   const childsInput = Array.from({ length: childs }, (_, i) => (
     <TextField
+      key={i}
       placeholder="Mohamed "
       required
       fullWidth
