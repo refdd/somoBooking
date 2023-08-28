@@ -14,7 +14,7 @@ function MainHeader({ regions }) {
       <MainNavBar />
 
       {/* header contnet */}
-      <div className="absolute top-[167%] md:top-[80%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full  ">
+      <div className="absolute top-[97%] md:top-[80%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full  ">
         <p className="text-center text-xl text-white font-sans font-semibold md:text-5xl">
           {t("common:home.HeaderHome")}
         </p>

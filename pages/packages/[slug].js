@@ -17,10 +17,11 @@ import SingleGalleryContainer from "@/components/single/SingleGalleryContainer";
 import TapsTour from "@/components/single/TapsTour";
 import TermsAndConditions from "@/components/single/TermsAndConditions";
 import { baseUrl, fetchApi } from "@/utils/ferchApi";
+import { newFeatchApi, newbaseUrl } from "@/utils/newFeatchApi";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
 
-function SingleTour({ singletour }) {
+function SingleTour({ singletour, newSingletour }) {
   const [isTop, setIsTop] = useState(true);
   useEffect(() => {
     document.addEventListener("scroll", () => {
@@ -39,7 +40,7 @@ function SingleTour({ singletour }) {
     city,
     min,
     max,
-    duration,
+    // duration,
     desc,
     days,
     note,
@@ -49,7 +50,7 @@ function SingleTour({ singletour }) {
     policy,
     id,
     hotel_rate,
-    image,
+    // image,
     code,
     meta_desc,
     meta_title,
@@ -57,7 +58,19 @@ function SingleTour({ singletour }) {
     reviews_count,
     eligibles,
   } = singletour;
-  // console.log(singletour);
+  const {
+    name,
+    place,
+    price_of_single_room_by_person_by_night,
+    image,
+    accommodation,
+    duration,
+    stars,
+    description,
+    cancellation_policy,
+    terms_and_conditions,
+  } = newSingletour;
+  console.log(newSingletour);
   return (
     <>
       <Head>
@@ -83,10 +96,10 @@ function SingleTour({ singletour }) {
           />
         </div>
         <HeaderSingle
-          title={title}
+          title={name}
           reviews_count={reviews_count}
-          location={city?.title}
-          price={best_price}
+          location={place?.name}
+          price={price_of_single_room_by_person_by_night}
           starNumber={package_rating}
         />
         <SingleGalleryContainer image={image} days={days} tourId={id} />
@@ -96,18 +109,18 @@ function SingleTour({ singletour }) {
               min={min}
               max={max}
               duration={duration}
-              desc={desc}
+              desc={description}
               includes={includes}
               unincludes={unincludes}
-              board={board}
+              board={accommodation}
               tourCode={code}
-              hotel_rate={hotel_rate?.title}
+              hotel_rate={stars}
               eligibles={eligibles}
             />
             <Itinerary daysItinerary={days} />
             <AdditionalInfo noteContent={note} />
             <CancellationPolicy Cancellation_Policy={policy} />
-            <TermsAndConditions />
+            <TermsAndConditions terms_and_conditions={terms_and_conditions} />
             <LeaveReview />
           </div>
           <From
@@ -142,9 +155,13 @@ export async function getServerSideProps({ params, locale, query, res }) {
   const singletour = await fetchApi(
     `${baseUrl}/packages/${slug}?locale=${locale}&currency=${currency}`
   );
+  const newSingletour = await newFeatchApi(
+    `${newbaseUrl}/property/api/list/${slug}`
+  );
   return {
     props: {
       singletour: singletour.data,
+      newSingletour: newSingletour,
     }, // will be passed to the page component as props
   };
 }

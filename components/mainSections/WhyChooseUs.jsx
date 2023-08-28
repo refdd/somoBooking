@@ -14,7 +14,7 @@ function WhyChooseUs({ homepage, snippets }) {
     <div
       className={
         homepage
-          ? "container mx-auto  px-4  mt-[390px] md:mt-4"
+          ? "container mx-auto  px-4  mt-[250px] md:mt-4"
           : "container mx-auto  px-4  mt-4"
       }
     >

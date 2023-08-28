@@ -21,6 +21,7 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import BottonInquire from "@/components/hleper/BottonInquire";
 import { useTranslation } from "react-i18next";
+import { newFeatchApi, newbaseUrl } from "@/utils/newFeatchApi";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -36,10 +37,11 @@ export default function Home({
   snippets,
   destinations,
   settings,
+  listTour,
 }) {
   const { locales, locale, push } = useRouter();
   const { t, i18n } = useTranslation();
-
+  console.log(listTour[0]);
   return (
     <>
       <Head>
@@ -56,7 +58,7 @@ export default function Home({
         titel={t("common:home.headPackages")}
         desc={t("common:home.packageDesc")}
       />
-      <TourRow tours={tours} destinations={destinations} />
+      <TourRow tours={tours} destinations={destinations} listTour={listTour} />
       <HeaderSections
         titel={t("common:home.headActivites")}
         desc={t("common:home.ActivitesDesc")}
@@ -86,6 +88,7 @@ export async function getServerSideProps({ locale, query }) {
   const tours = await fetchApi(
     `${baseUrl}/packages?type_id=1&locale=${locale}&limit=9&currency=${currency}`
   );
+  const listTour = await newFeatchApi(`${newbaseUrl}/property/api/list`);
   const Activities = await fetchApi(
     `${baseUrl}/packages?type_id=2&locale=${locale}&limit=9&currency=${currency}`
   );
@@ -115,6 +118,7 @@ export async function getServerSideProps({ locale, query }) {
       snippets: snippets.data,
       destinations: destinations.data,
       settings: settings,
+      listTour: listTour,
     },
   };
 }

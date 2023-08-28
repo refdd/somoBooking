@@ -2,7 +2,7 @@ import React from "react";
 
 function HeaderVideo() {
   return (
-    <div className="w-full h-full relative">
+    <div className="w-full  h-[500px]  md:h-full relative">
       <video
         className=" w-full h-full object-cover"
         src={"https://new.tourzable.com/videos/01.mov"}

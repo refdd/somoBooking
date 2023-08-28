@@ -61,7 +61,8 @@ function OverView({
                 Meals
               </span>
               <span className="text-[15px] text-gray-500 font-sans capitalize">
-                {board?.title}
+                {/* {board?.title} */}
+                {board}
               </span>
             </div>
           )}

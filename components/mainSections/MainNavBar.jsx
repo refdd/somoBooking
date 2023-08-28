@@ -52,7 +52,7 @@ function MainNavBar() {
         <div
           className={`grid grid-cols-2 md:grid-cols-7 items-center justify-between transition-all px-3 py-4 md:py-2  ${
             menuBar ? "bg-white" : ""
-          } ${!isTop ? "bg-[#FFF]" : undefined} `}
+          } ${!isTop ? "bg-[#FFF]" : " bg-white  md:bg-transparent"} `}
         >
           <div className=" flex items-center gap-5 md:col-span-6">
             {/* logo */}
@@ -64,8 +64,8 @@ function MainNavBar() {
                   ) : (
                     <Image
                       src={NavLogo}
-                      width={100}
-                      height={34}
+                      width={135}
+                      height={40}
                       loading={"lazy"}
                       alt="logo"
                       sizes="(max-width: 768px) 100vw,
@@ -212,7 +212,9 @@ function MainNavBar() {
               onClick={handelMenubar}
               size={30}
               className={` cursor-pointer transition-all ${
-                menuBar || !isTop ? "text-gray-700" : "text-white"
+                menuBar || !isTop
+                  ? "text-gray-700"
+                  : "  text-gray-700 md:text-white"
               }`}
             />
           </div>

@@ -14,7 +14,7 @@ const locationTour = [
   { id: 2, title: "Dubai" },
   { id: 3, title: "Qatar" },
 ];
-function TourRow({ tours, destinations }) {
+function TourRow({ tours, destinations, listTour }) {
   const [activeId, setActiveId] = useState(null);
   const { t, i18n } = useTranslation();
   const handleClick = (id) => () => {
@@ -66,20 +66,20 @@ function TourRow({ tours, destinations }) {
         modules={[Pagination]}
         className="mySwiper"
       >
-        {tours?.map((tour) => (
+        {listTour?.map((tour) => (
           <SwiperSlide key={tour?.id}>
             <CardTour
               sigleImage={tour?.image}
-              image={tour?.images}
-              location={tour?.city?.desc}
-              title={tour.title}
-              description={tour.short_desc.substring(0, 90)}
-              price={tour.best_price}
+              image={[]}
+              location={tour?.place?.name}
+              title={tour.name}
+              description={tour.description.substring(0, 90)}
+              price={tour.price_of_double_room_by_night}
               duration={tour.duration}
               ratingNumber={tour.package_rating}
               typePackage={"packages"}
-              slug={tour.slug}
-              tourType={tour.type.title}
+              slug={tour.id}
+              tourType={"tour.type.title"}
               tourId={tour.id}
               is_requested={tour?.immediate_booking}
             />
