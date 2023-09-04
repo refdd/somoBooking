@@ -10,6 +10,7 @@ import ReadAlso from "@/components/singelBlog/ReadAlso";
 import IconBreadcrumbs from "@/components/single/Breadcrumbs";
 import RelatedTours from "@/components/single/RelatedTours";
 import { baseUrl, fetchApi } from "@/utils/ferchApi";
+import { newFeatchApi, newbaseUrl } from "@/utils/newFeatchApi";
 import { format } from "date-fns";
 import Head from "next/head";
 import React from "react";
@@ -71,14 +72,14 @@ function singelBlog({ singletBlog, readAlso }) {
 
 export default singelBlog;
 export async function getServerSideProps({ params, locale }) {
-  const singletBlog = await fetchApi(
-    `${baseUrl}/posts/${params.slug}?locale=${locale}`
-  );
+  const singletBlog = await newFeatchApi(`${newbaseUrl}/blog/api/list/1`);
   const readAlso = await fetchApi(`${baseUrl}/posts?locale=${locale}&limit=9`);
-
+  // const singletBlog = await fetchApi(
+  //   `${baseUrl}/posts/${params.slug}?locale=${locale}`
+  // );
   return {
     props: {
-      singletBlog: singletBlog.data,
+      singletBlog: singletBlog,
       readAlso: readAlso.data,
     }, // will be passed to the page component as props
   };

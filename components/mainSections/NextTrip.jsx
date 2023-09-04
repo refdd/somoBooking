@@ -9,7 +9,7 @@ import { BsArrowUpRight } from "react-icons/bs";
 import { format } from "date-fns";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
-function NextTrip({ posts }) {
+function NextTrip({ posts, blog }) {
   const { t, i18n } = useTranslation();
   const formatDate = (dateCurrenity) => {
     const dateString = dateCurrenity;
@@ -47,7 +47,7 @@ function NextTrip({ posts }) {
             },
           }}
         >
-          {posts?.map((post) => (
+          {blog?.map((post) => (
             <SwiperSlide key={post.id}>
               <div className="flex flex-col space-y-4">
                 {/* image */}
@@ -65,11 +65,13 @@ function NextTrip({ posts }) {
                   />
                 </div>
                 <div className="flex flex-col space-y-1">
-                  <p className="text-[#051036] text-lg font-medium font-sans capitalize cursor-pointer">
-                    {post.title}
-                  </p>
+                  <Link href={`/Saudi-travel-blog/${post.id}`}>
+                    <p className="text-[#051036] text-lg font-medium font-sans capitalize cursor-pointer">
+                      {post.title}
+                    </p>
+                  </Link>
                   <p className="text-gray-500 text-sm md:text-lg font-sans capitalize font-normal">
-                    {post.short_desc}
+                    {post.description}
                   </p>
                   <span className="text-MainYeloow text-[15px] font-sans capitalize">
                     {formatDate(post.created_at)}

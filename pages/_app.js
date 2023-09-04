@@ -11,7 +11,6 @@ import createCache from "@emotion/cache";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { prefixer } from "stylis";
 import React, { useEffect, useLayoutEffect, useState } from "react";
-import * as locales from "@mui/material/locale";
 
 const cacheLtr = createCache({
   key: "muiltr",
@@ -29,7 +28,6 @@ const ltrTheme = createTheme({ direction: "ltr" });
 const rtlTheme = createTheme({ direction: "rtl" });
 export default function App({ Component, pageProps, session }) {
   const [isRtl, setIsRtl] = useState(false);
-  const [value, setValue] = useState("initial value");
   const router = useRouter();
   const { locale, locales } = router;
   const { t, i18n } = useTranslation();
@@ -64,7 +62,6 @@ export default function App({ Component, pageProps, session }) {
         changeLanguage("ar");
     }
   }, []);
-  console.log(locale);
   return (
     <SessionProvider session={session}>
       <ContextProvider>

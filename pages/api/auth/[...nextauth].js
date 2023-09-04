@@ -30,23 +30,26 @@ export default NextAuth({
       async authorize(credentials, req) {
         // Here you add authentication logic:
         // look for the user, compare the passwords...
-        const res = await fetch("https://new.tourzable.com/api/login", {
-          method: "post",
+        const res = await fetch(
+          "https://andrewromany.pythonanywhere.com/accounts/login/",
+          {
+            method: "post",
 
-          headers: {
-            "Content-Type": "application/json",
-          },
+            headers: {
+              "Content-Type": "application/json",
+            },
 
-          body: JSON.stringify({
-            email: req.body.email,
-            password: req.body.password,
-          }),
-        });
+            body: JSON.stringify({
+              email: req.body.email,
+              password: req.body.password,
+            }),
+          }
+        );
         // and then you may or may not get the user
         const user = await res.json();
 
         // if credentials are valid
-        if (user.success) {
+        if (user) {
           const data = user.data;
           console.log("====================================");
           console.log(data);

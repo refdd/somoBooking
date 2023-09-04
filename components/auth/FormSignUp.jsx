@@ -40,10 +40,10 @@ function FormSignUp() {
   const onSubmit = (data) => {
     axios
       .post(
-        "https://new.tourzable.com/api/register",
+        "https://andrewromany.pythonanywhere.com/accounts/register/",
         {
           ...data,
-          phone: number,
+          phone_number: number,
         },
         {
           headers: {

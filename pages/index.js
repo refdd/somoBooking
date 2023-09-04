@@ -8,8 +8,6 @@ import TourRow from "@/components/tour/TourRow ";
 import Reviews from "@/components/mainSections/Reviews";
 import NextTrip from "@/components/mainSections/NextTrip";
 import Subscribe from "@/components/mainSections/Subscribe";
-import DownLoadApp from "@/components/mainSections/DownLoadApp";
-import NotMember from "@/components/mainSections/NotMember";
 import Footer from "@/components/mainSections/Footer";
 import HeaderSections from "@/components/parts/HeaderSections";
 import OfferSection from "@/components/mainSections/OfferSection";
@@ -38,10 +36,11 @@ export default function Home({
   destinations,
   settings,
   listTour,
+  blog,
 }) {
   const { locales, locale, push } = useRouter();
   const { t, i18n } = useTranslation();
-  console.log(listTour[0]);
+  // console.log(blog);
   return (
     <>
       <Head>
@@ -72,7 +71,7 @@ export default function Home({
       <LandMarkSection regions={regions} />
       <Reviews reviews={reviews} allPartners={partners} />
       <OfferSection offers={offers} settingsOffer={settings} />
-      <NextTrip posts={posts} />
+      <NextTrip posts={posts} blog={blog} />
       <FaQSection faqs={faqs} />
       <Subscribe />
       {/* <DownLoadApp /> */}
@@ -85,6 +84,7 @@ export default function Home({
 export async function getServerSideProps({ locale, query }) {
   const currency = query.currency || "USD";
   const posts = await fetchApi(`${baseUrl}/posts?locale=${locale}&limit=9`);
+  const blog = await newFeatchApi(`${newbaseUrl}/blog/api/list`);
   const tours = await fetchApi(
     `${baseUrl}/packages?type_id=1&locale=${locale}&limit=9&currency=${currency}`
   );
@@ -119,6 +119,7 @@ export async function getServerSideProps({ locale, query }) {
       destinations: destinations.data,
       settings: settings,
       listTour: listTour,
+      blog: blog,
     },
   };
 }
